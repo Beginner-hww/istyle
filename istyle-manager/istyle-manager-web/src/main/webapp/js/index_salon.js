@@ -56,7 +56,6 @@ function showInformation2(){
                 if (info.errCode === 0) {
                     sessionStorage.setItem('styHouseId',info.result.styHouseId);
                     let showInform = "";
-                    console.log("成功展示");
                     showInform += "<p><img src='" + info.result.styHousePhoto + "'></p><div class=\"clear\"></div>" +
                         "<p><span class=\"salonname\">造型屋名：" + info.result.styHouseName + "</span></p><div class=\"clear\"></div>" +
                         "<p><span class=\"address\">具体地址：" + info.result.styHouseAddress + "</span></p><div class=\"clear\"></div>" +
@@ -95,7 +94,7 @@ function information1(){
                 // var info = xhr.responseText;
                 if (info.errCode === 0){
                     console.log("保存成功"+xhr.status);
-                    showInformation();
+                    showInformation2();
                 }else{
                     console.log("保存失败");
                 }
@@ -128,7 +127,7 @@ function mealPublish(){
                 // var info = xhr.responseText;
                 if (info.errCode === 0){
                     console.log("提交成功"+xhr.status);
-                    showInformation();
+                    showmeal();
                 }else{
                     console.log("提交失败");
                 }
@@ -252,7 +251,7 @@ function updadeMeal(obj){
                 // var info = xhr.responseText;
                 if (info.errCode === 0){
                     console.log("提交成功"+xhr.status);
-                    showInformation();
+                    showmeal();
                 }else{
                     console.log("提交失败");
                 }
@@ -280,7 +279,7 @@ function updadeMeal(obj){
                     console.log(info1);
                     if (!info1.errCode){
                         console.log("删除套餐成功"+xhr.status);
-                        subscribe();
+                        showmeal();
                     }else{
                         console.log("删除套餐失败");
                     }
@@ -313,7 +312,7 @@ function stylistPublish(){
                 // var info = xhr.responseText;
                 if (info.errCode === 0){
                     console.log("提交成功"+xhr.status);
-                    showInformation();
+                    showstylist();
                 }else{
                     console.log("提交失败");
                 }
@@ -441,7 +440,7 @@ function updadeStylist(obj){
                 // var info = xhr.responseText;
                 if (info.errCode === 0){
                     console.log("提交成功"+xhr.status);
-                    showInformation();
+                    showstylist();
                 }else{
                     console.log("提交失败");
                 }
@@ -469,7 +468,7 @@ function updadeStylist(obj){
                     console.log(info1);
                     if (!info1.errCode){
                         console.log("删除造型师成功"+xhr.status);
-                        subscribe();
+                        showstylist();
                     }else{
                         console.log("删除造型师失败");
                     }
@@ -486,10 +485,10 @@ function updadeStylist(obj){
         let data={"styHouseId":styHouseId,"stylistId":stylistId};
         xhr.send(JSON.stringify(data));
     }
-
 window.onload=function(){
     showInformation2();
     console.log("5555555555555555");
+    console.log(1.335.toFixed(2));
     /* let collectBtn=document.getElementById('collectBtn');
      collectBtn.addEventListener('click',collect,false);*/
 //collectBtn.removeEventListener('click',collect,false); 这个false是阻止冒泡的意思

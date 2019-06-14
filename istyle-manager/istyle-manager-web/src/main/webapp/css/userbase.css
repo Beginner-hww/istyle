@@ -527,4 +527,46 @@
 	padding: 0 20px;
 	color: #000000;
 }
-
+/*我的主页我的咨询*/
+.rightBottomOrder1{
+	width: 800px;
+	height: 500px;
+	background-color: #FFFFFF;
+	margin-top: 20px;
+	border-radius: 1%;
+}
+.rightBottomOrder1 .mealContent{
+	width: 800px;
+	height: 150px;
+	border-bottom: 1px solid #999999;
+	margin: 0 auto;
+}
+.rightBottomOrder1 img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin: 40px 0 20px 100px;
+	border-radius: 50%;
+}
+.rightBottomOrder1 p {
+	float: left;
+	width: 350px;
+	margin: 35px 10px 0 60px;
+}
+.rightBottomOrder1 span {
+	float: left;
+}
+.rightBottomOrder1 .orderNum {
+	margin-left: 20px;
+}
+.rightBottomOrder1 button.order {
+	float: left;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 65px;
+	color: #FFFFFF;
+	background-color: #FF9800;
+	border: none;
+	border-radius: 5%;
+	padding: 5px;
+}

@@ -522,6 +522,87 @@ function addSubsc(obj){
     /*console.log(JSON.stringify(data));*/
 }
 
+//我的咨询
+function myConsultation() {
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                var info = JSON.parse(xhr.responseText);
+                // var info = xhr.responseText;
+                if (info.errCode === 0) {
+                    /* let styNum="";
+                     //<span class="styNum">造型师数(6)</span>
+                     styNum+="造型师数（"+info.result.stylistCount+")";*/
+                    let s = "";
+                    for (let i = 0; i < info.result.advisorys.length; i++) {
+                        s += "<div class='clear'></div>" +
+                            "<div class=\"mealContent\">" +
+                            "<img src='" + info.result.advisorys[i].stylistPhoto + "'/>" +
+                            "<p>" +
+                            "<span class=\"stylistName\">" + info.result.advisorys[i].stylistName + "</span><br />"+
+                            "<span class=\"orderTime\">回复咨询时间："+info.result.advisorys[i].advisoryEndTime+"</span>"+
+                            "</p>" +
+                            "<button class='order' onclick='locationCheckConsul(this)' id="+info.result.advisorys[i].advisoryId+">查看咨询并回复</button>"+
+                            "</div>";
+                    }
+                    /*document.getElementsByClassName('styNum')[0].innerHTML=styNum;*/
+                    document.getElementById('showstylist').innerHTML = s;
+                } else {
+                    console.log("造型师管理展示失败");
+                }
+            } else {
+                console.log("发生错误" + xhr.status);
+            }
+        }
+    }
+    /*let stylistId=sessionStorage.getItem('stylistId');*/
+    /*let url = "/styHouse/" + styHouseId + "/stylistManager";*/
+    xhr.open('post',"/userHome/advisory");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    let obj = {
+        "stoken":getCookie('stoken'),
+        "stylistId": stylistId
+    };
+    xhr.send(JSON.stringify(obj));
+}
+/*我的咨询跳转查看咨询*/
+function locationCheckConsul(obj1){
+    let xhr=new XMLHttpRequest();
+    xhr.onreadystatechange=function(){
+        if (xhr.readyState===4){
+            if (xhr.status>=200 && xhr.status<300 || xhr.status===304){
+                var info = JSON.parse(xhr.responseText);
+                if (info.errCode === 0) {
+                    window.location.href = "/html/checkConsultation.html";
+                    alert("跳转成功");
+                    let hidden=document.getElementById('beforeLogin');
+                    hidden.style.display="none";
+                    let userName=getCookie('username');
+                    let appear=document.getElementsByClassName('afterLogin')[0];
+                    appear.innerHTML="欢迎"+userName+"登录istyle";
+                }else{
+                    alert("跳转失败，该用户没有登录");
+                }
+            }else {
+                alert("发生错误"+xhr.status);
+                console.error(xhr.responseText);
+            }
+        }
+    }
+    xhr.open('post','/userHome/replyAdvisory');
+    xhr.setRequestHeader("Content-Type","application/json");
+    let data=getCookie('stoken');
+    let advisoryId=obj1.getAttribute("id");
+    sessionStorage.setItem('advisoryId',advisoryId);
+    let obj={"stoken":data,"advisoryId":advisoryId};
+    xhr.send(JSON.stringify(obj));
+
+}
+
+
+
+
 //我的预约start
 /*function myOrder(){
     let xhr=new XMLHttpRequest();
