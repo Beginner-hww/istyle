@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回复咨询页面</title>
+    <link rel="stylesheet" href="/css/answerConsultation.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <link rel="stylesheet" href="/css/login-register.css">
+</head>
+<body>
+<!--页头-->
+<div class="top2">
+    <div class="main">
+        <div class="topheader">
+            <div class="logo">
+                <img src="/img/logo1.png"/>
+            </div>
+            <div class="top-right">
+                <!--              <div class="myhome">
+                                  <div class="myhometop">
+                                  </div>
+                                  <div class="mydropdown">
+                                  </div>
+                              </div>-->
+                <div class=" beforeLogin">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="afterLogin" style="color: #FFF;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="container main">
+    <!--       <p><label for="changeheadPortrait">照片:</label>
+               <input type="button" id="changeheadPortrait" onclick="changeHead.click()" value="上传图片">
+               <input type="file" id="changeHead" style="display: none" onchange="input1.value=this.value" name="userPhoto">
+               <input type="text" id="input1" style="margin-right:-100px;border-radius: 5px; border: 1px solid #5bc0de; width: 200px; height: 30px;">
+           </p>
+           <p><label for="height">身高:</label><input type="text" class="input1" id="height" name="height" placeholder="请输入您的身高" /></p>
+           <p><label for="weight">体重:</label><input type="text" class="input2" id="weight" name="weight" placeholder="请输入您的体重"/></p>
+           <p><label for="style">穿衣风格:</label>&lt;!&ndash;<input type="text" class="input3" id="style" name="style" placeholder="如简约、潮流、韩范等" />&ndash;&gt;
+               <textarea name="style" class="input3" id="style" cols="30" rows="10" placeholder="如简约、潮流、韩范等"></textarea></p>
+           <p><label for="question">问题描述:</label>&lt;!&ndash;<input type="text" class="input4" id="question" name="question" placeholder="请描述一下您的问题" />&ndash;&gt;
+               <textarea name="question" class="input4" id="question" cols="30" rows="10" placeholder="请描述一下您的问题"></textarea>
+           </p>-->
+    <h5>用户咨询内容</h5>
+    <div id="myConsul">
+        <p><label class="myphoto">咨询照片</label><img src="../我的主页/img/designerphoto2.jpg"/></p><div class="clear"></div>
+        <p><span class="salonname">我的基本信息:165cm，49kg</span></p><div class="clear"></div>
+        <p><span class="address">我的穿衣风格描述:平时多可爱俏皮风，平时多可爱俏皮风，平时多可爱俏皮风</span></p><div class="clear"></div>
+        <p><span class="meal">本次咨询问题描述：下周要参加同学聚会，想换个造型，不介意剪短发或者染头发</span></p><div class="clear"></div>
+    </div>
+    <h4>回复咨询</h4>
+    <div id="stylist_answer">
+        <p><label for="changeheadPortrait">照片:</label>
+            <input type="button" id="changeheadPortrait" onclick="changeHead.click()" value="上传图片">
+            <input type="file" id="changeHead" style="display: none" onchange="input1.value=this.value" name="userPhoto">
+            <input type="text" id="input1" style="margin-right:-100px;border-radius: 5px; border: 1px solid #5bc0de; width: 200px; height: 30px;">
+        </p>
+        <p><label for="question">回复内容:</label>
+            <textarea name="question" class="input4" id="question" cols="36" rows="10" placeholder="请描述一下您的问题" >
+            </textarea>
+        </p>
+        <div class="clear"></div>
+        <p style="margin-top: 20px"><label for="height">所在造型屋链接:</label><input type="text" class="input1" id="height" name="height" placeholder="请复制你所在的造型屋链接以便用户预约" /></p>
+        <p><input type="button" onclick="answerConsul()/*; a()*/" class="submit" value="回复"/></p>
+    </div>
+</div>
+
+<a href="#" class="return" style="
+        position: fixed;
+        width: 30px;
+        height:80px;
+        top: 250px;
+        left:50px;
+        z-index: 5000;
+    ">
+    <img src="/img/return.gif" alt=""/>
+</a>
+
+<div class="footer3">
+    <div class="footer-row1">
+        <a href="">关于我们 -</a>
+        <a href="">使用手册 -</a>
+        <a href="">法律声明 -</a>
+        <a href="">广告服务 -</a>
+        <a href="">联系我们 -</a>
+        <a href="">友情链接 -</a>
+        <a href="">删除或修改信息 -</a>
+        <a href="">网站地图</a>
+    </div>
+    <span>技术支持:xxxx</span>
+    <span>粤ICP备案号12020213号-1</span>
+    <span>1024商务网客服QQ:xxx</span>
+    <span>站长统计</span>
+    </br>
+    <span>免责声明:此网页并非该单位官网，而是由会员免费注册的1024商务网商铺，内容的真实性、准确性和合法性由</span></br>
+    <span>布者负责，istyle对此不承担任何责任!</span></br>
+    <span>如发现侵权违规问题请发邮件至xxxx@qq.com或在线留言联系删除。</span>
+</div>
+
+<script src="/js/answerConsultation.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/base.js"></script>
+<script>
+    /*    function a() {
+            alert("咨询成功，造型师已收到您的咨询，等造型师回复后如果满意的话可以在造型屋预约ta做造型哦^_^");
+        }*/
+</script>
+</body>
+</html>

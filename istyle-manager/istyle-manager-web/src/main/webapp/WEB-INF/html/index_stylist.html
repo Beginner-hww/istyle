@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>造型师主页</title>
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/index_stylist.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/userbase.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/login-register.css"/>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_640258_2hryzc2bwvghw7b9.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../public/css/laydate.css"/>-->
+</head>
+<body>
+
+
+
+<div class="top">
+    <div class="main">
+        <div class="topheader">
+            <div class="logo">
+                <img src="/img/logo1.png"/>
+            </div>
+            <div class="top-right">
+                <div class="myhome">
+                    <div class="myhometop">
+                    </div>
+                    <div class="mydropdown">
+                    </div>
+                </div>
+                <div class=" beforeLogin">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="afterLogin" style="color: #FFF;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="main">
+    <div class="line clear"></div>
+
+    <div class="contain">
+        <div class="verticalNav">
+            <div class="box1">
+                <div class="box2">
+                    <ul>
+                        <span>造型屋主页</span>
+                        <li class="active">
+                            <div class="left">
+                                <span>基本信息</span>
+                            </div>
+                            <div class="right">
+                                <div class="rightTop tit">  <!--tit是为了写小竖线的样式-->
+                                    <span>基本信息</span>
+                                </div>
+                                <div class="rightBottomInformation">
+                                    <div class="showInformation" id="showInformation">
+                                        <div class="addContent1">
+                                            <!--<p><img src="../我的主页/img/designerphoto2.jpg"/></p><div class="clear"></div>
+                                            <p><span class="salonname">造型师名字：张敏梓</span></p><div class="clear"></div>
+                                            <p><span class="address">所在造型屋地址：广东省惠州市惠城区港汇购物商城二楼</span></p><div class="clear"></div>
+                                            <p><span class="meal">造型师简介：本人在流行造型屋任职，擅长做时尚烫染造型</span></p><div class="clear"></div>
+                                            <p><span class="phone">联系电话：13625985542</span></p><div class="clear"></div>-->
+                                        </div>
+                                        <input type="button" id="editorBtn1" onclick="editor1()" value="编辑"/>
+                                    </div>
+                                    <div class="updateInfo" style="display: block">
+                                        <form action="" method="post" id="form">
+                                            <!--<p>
+                                                <img src="../img/headphoto.png" id="headPortrait"/>
+                                                <input type="button" id="changeheadPortrait" onclick="changeHead.click()" value="更换头像">
+                                                <input type="file" id="changeHead" style="display: none" onchange="input1.value=this.value" name="userPhoto">
+                                                <input type="text" id="input1" style="float: left; margin-top: 62px; margin-left: 18px; width: 200px; height: 30px; border: none;">
+                                            </p>-->
+                                            <div class="clear"></div>
+                                            <div id="updateContent1">
+                                                <p>
+                                                    <input type="button" id="changeheadPortrait" onclick="changeHead.click()" value="上传照片">
+                                                    <input type="file" id="changeHead" style="display: none" onchange="input1.value=this.value" name="userPhoto">
+                                                    <input type="text" id="input1" style="margin-right:-100px;border-radius: 5px; border: 1px solid #5bc0de; width: 250px; height: 30px;">
+                                                </p>
+                                                <p><label for="salonName">名字：</label><input type="text" class="input1" id="salonName" name="salonName" placeholder="请输入造型屋名" /></p>
+                                                <p><label for="meal">简介：</label><textarea name="meal" class="input3" id="meal" cols="30" rows="10" placeholder="请输入套餐简介(最多25字)"></textarea></p>
+                                                <p><label for="address">所在造型屋地址：</label><textarea name="address" class="input2" id="address" cols="30" rows="10" placeholder="请输入你具体地址(最多25字)"></textarea></p>
+                                                <p><label for="phone">联系电话：</label><input type="text" class="input5" id="phone" name="phone" placeholder="请输入联系电话" /></p>
+                                            </div>
+                                            <p><input type="button" onclick="information();success();showInformation()" id="submit" value="保存"/></p>
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="left" onclick="showConsul()" style="border: 0; background-color: transparent; outline: none; width: 150px;height: 43px; overflow: hidden;"><span>待处理咨询</span></button>
+                            <div class="right">
+                                <div class="rightTop tit">  <!--tit是为了写小竖线的样式-->
+                                    <span>待处理咨询</span>
+                                </div>
+                                <div class="rightBottomOrder">
+                                    <div id="showstylist">
+                                        <div class="clear"></div>
+                                        <div class="mealContent">
+                                            <img src="../造型屋/img/user1.jpg"/>
+                                            <p>
+                                                <span class="stylistName">小镇</span><br />
+                                                <span class="orderTime">发起咨询时间：2019.06.06 8:00</span>
+                                            </p>
+                                            <button class='order' onclick='' id="">查看咨询并回复</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="footer2">
+    <div class="footer-row1">
+        <a href="">关于我们 -</a>
+        <a href="">使用手册 -</a>
+        <a href="">法律声明 -</a>
+        <a href="">广告服务 -</a>
+        <a href="">联系我们 -</a>
+        <a href="">友情链接 -</a>
+        <a href="">删除或修改信息 -</a>
+        <a href="">网站地图</a>
+    </div>
+    <span>技术支持:xxxx</span>
+    <span>粤ICP备案号12020213号-1</span>
+    <span>1024商务网客服QQ:xxx</span>
+    <span>站长统计</span>
+    </br>
+    <span>免责声明:此网页并非该单位官网，而是由会员免费注册的1024商务网商铺，内容的真实性、准确性和合法性由</span></br>
+    <span>布者负责，istyle对此不承担任何责任!</span></br>
+    <span>如发现侵权违规问题请发邮件至xxxx@qq.com或在线留言联系删除。</span>
+</div>
+
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/userbase.js" type="text/javascript"></script>
+<script src="/js/index_stylist.js"></script>
+<script src="/js/base.js"></script>
+<!--<script src="../public/js/laydate.js"></script>-->
+<!--<script src="../home/js/index2.js"></script>-->
+
+</body>
+</html>

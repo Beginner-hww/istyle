@@ -1,0 +1,161 @@
+html{
+    background: url(/img/userIndexbackground.jpg);
+    background-size: cover;
+}
+/*滚动条样式*/
+.right::-webkit-scrollbar{  /*滚动条整体样式*/
+    width: 4px;
+    height: 200px;
+}
+.right::-webkit-scrollbar-thumb{/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.right::-webkit-scrollbar-track{/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+/*展示信息start*/
+.rightBottomInformation .addContent1 p:first-child{
+    margin-top: 50px;
+    margin-left: 340px;
+}
+.rightBottomInformation .addContent1 p{
+    float: left;
+}
+.rightBottomInformation .addContent1 span{
+    float: left;
+    margin-left: 250px;
+    display: inline-block;
+    width: 500px;
+    overflow-wrap: normal;
+    text-align: left;
+}
+.rightBottomInformation .addContent1 img{
+    display: inline-block;
+    width: 140px;
+    height: 120px;
+    margin-top: 20px;
+    border-radius: 5%;
+}
+.rightBottomInformation #editorBtn1{
+    width: 12%;
+    /*display: block;*/
+    margin: 0 auto;
+    margin-top: 30px;
+    color: #FFFFFF;
+    height: 32px;
+    background-color: #5bc0de;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    transition: .5s;   /*把鼠标指针悬停在 div 元素上，它的外观会逐渐改变*/
+    cursor: pointer;
+}
+/*
+展示信息end
+*/
+/*
+修改信息start
+*/
+.rightBottomInformation #updateContent1 p:first-child{
+    margin-top: 100px;
+}
+.rightBottomInformation #updateContent1 p{
+    width: 800px;
+}
+.rightBottomInformation #updateContent1 input:nth-child(3),.rightBottomInformation #updateContent1 input:nth-child(4),.rightBottomInformation #updateContent1 input:nth-child(5){
+    width: 250px;
+}
+.rightBottomInformation #updateContent1 span{
+    margin-left: 50px;
+}
+.input1,.input4,.input5{
+    width: 250px;
+    margin-right:-100px;
+    border-radius: 5px;
+    border: 1px solid #5bc0de;
+    height: 30px;
+}
+.input2,.input3{
+    width: 250px;
+    margin-right: -100px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #5bc0de;
+    margin-top: 10px;
+}
+#submit{
+    outline: none;
+    background-color: #5bc0de;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px 50px;
+    border-radius: 8px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+#submit:hover{
+    outline: none;
+    background-color: #FFFFFF;
+    border: 1px solid #3ACA7A;
+    color: #5bc0de;
+    padding: 8px 50px;
+    border-radius: 8px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+
+/*造型师管理start*/
+.rightBottomOrder{
+    width: 800px;
+    height: 500px;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    border-radius: 1%;
+}
+.rightBottomOrder .mealContent{
+    width: 800px;
+    height: 150px;
+    border-bottom: 1px solid #999999;
+    margin: 0 auto;
+}
+.rightBottomOrder img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 40px 0 20px 100px;
+    border-radius: 50%;
+}
+.rightBottomOrder p {
+    float: left;
+    width: 350px;
+    margin: 35px 10px 0 60px;
+}
+.rightBottomOrder span {
+    float: left;
+}
+.rightBottomOrder .orderNum {
+    margin-left: 20px;
+}
+.rightBottomOrder button.order {
+    float: left;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 65px;
+    color: #FFFFFF;
+    background-color: #FF9800;
+    border: none;
+    border-radius: 5%;
+    padding: 5px;
+}
+.demo-input{
+    width: 250px;
+    margin-right: -100px;
+    border-radius: 5px;
+    border: 1px solid #5bc0de;
+    height: 30px;
+}
